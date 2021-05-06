@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SSTV Links</title>
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<form id="sstvCredentials">
+  <label for="sstvUsername">Username:</label>
+  <input type="text" id="sstvUsername" name="sstvUsername"><br><br>
+  <label for="sstvPassword">Password:</label>
+  <input type="text" id="sstvPassword" name="sstvPassword"><br><br>
+</form>
+ Provider
+ <div class="dropdown">
+
+    <select id="sstvProvider">
+        <option value="viewss" selected>StarStreams</option>
+        <option value="view247">Live247</option>
+        <option value="viewstvn">StreamTVNow</option>
+    </select>
+  </div> 
+
+Server
+ <div class="dropdown">
+
+    <select id="sstvServer">
+        <option value="deu" selected>EU-Mix</option>
+        <option value="deu-de">DE-Frankfurt</option>
+        <option value="deu-nl">NL-Mix</option>
+		<option value="deu-uk1">UK-London1</option>
+		<option value="deu-uk2">UK-London2</option>
+		<option value="dnae">US-East-Mix</option>
+		<option value="dnaw">US-West-Mix</option>
+    </select>
+  </div> 
+  
+
+
+<input type="button" id="btn" value="Submit" onClick="javascript: window.open('https://auth.smoothstreams.tv/hash_api.php?username=' + document.getElementById('sstvUsername).value + '&password="' + document.getElementById('sstvPassword').value + '&site=' + document.getElementById('sstvProvider).value);" />
+
+<!--
+
+sstvHashUrl = '"https://auth.smoothstreams.tv/hash_api.php?username=" + sstvUsername "&password=" + sstvPassword + "&site=" + sstvProvider'
+
+Stream URL = '"https://" + sstvServer + ".smoothstreams.tv/" + sstvProvider + "ch" + sstvChannel + "q1.stream/playlist.m3u8?wmsAuthSign=" + sstvHash'
+
+-->
+test
+</body>
+</html>
